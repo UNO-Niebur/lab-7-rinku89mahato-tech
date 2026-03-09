@@ -1,4 +1,4 @@
-#Project Euler Problem 1
+#Project Euler Problem_Multiples of 3 and 5
 
 import NumberTests
 

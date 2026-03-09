@@ -85,13 +85,13 @@ def main():
 
 # prime below 
 
-def sum_primes_below(limit):
+def sum_primes_below(input_num):
     """ Return the sum of all prime numbers below the given limit"""
-    sieve  = [True] * limit
+    sieve  = [True] * input_num
     sieve[0] = sieve[1] = False
-    for f in range (2, int(limit ** 0.5) + 1):
+    for f in range (2, int(input_num ** 0.5) + 1):
         if sieve[f]:
-            for multiple in range(f * f, limit, f):
+            for multiple in range(f * f, input_num, f):
               sieve[multiple] = False
         
             

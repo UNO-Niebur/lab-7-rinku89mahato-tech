@@ -1,5 +1,5 @@
 #Problem2.py
-#Project Euler problem 2
+#Project Euler problem 2_Even fibonacciSequence
 
 from NumberTests import isEven
 from NumberTests import fibonacciSequence
