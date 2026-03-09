@@ -8,9 +8,30 @@ def isThreeOrFive(n):
   else:
     return False
 
+def getFactors(num):
+  """Returns a list of all factors of a given integer"""
+  factors = []
+  for f in range (1, num//2 + 1):
+    if num % f == 0:
+      factors.append(f)
+
+  return factors
+
+
+
+
 def isPrime(p):
   """Returns boolean (True/False) if the value given is prime."""
-
+  if p == 2:
+    return True
+  if isEven(p):
+    return False
+  
+  
+  for div in range(3, p // 2, 2):
+    if p % div == 0:
+      return False
+    
   return True
 
 def isEven(n):
@@ -52,6 +73,15 @@ def main():
 
   if isEven(num):
     print("%d is an even number" %(num))
+
+# prime below 
+
+def sum_primes_below(num):
+    primes = []
+    for f in range(2, num):
+        if isPrime(f):
+            primes.append(f)
+    return sum(primes)
 
 
 if __name__ == '__main__':
