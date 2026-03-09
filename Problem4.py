@@ -1,6 +1,14 @@
+#Problem3.py
+#isPrime
 
-from NumberTests import sum_primes_below
+from NumberTests import isPrime
+from NumberTests import getFactors
 
-primes_below = int(input("Enter number:"))
-total_sum = sum_primes_below(primes_below)
-print("Sum_of_primes_below", primes_below, ":", total_sum)
+def main():
+    number = 600851475143 # largest prime factor of provided number
+    factors = getFactors(number)
+    print(f"factors of {number}:{factors}")
+
+
+if __name__ == '__main__':
+    main()
