@@ -1,5 +1,5 @@
 #Problem10
-#summation_of_primes
+#summationofprimes
 from NumberTests import sum_primes_below
 
 def main():
