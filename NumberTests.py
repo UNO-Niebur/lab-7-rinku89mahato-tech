@@ -86,11 +86,16 @@ def main():
 # prime below 
 
 def sum_primes_below(limit):
-    total  = 0
-    for f in range(2, limit):
-        if isPrime(f):
-            total += f
-    return total
+    """ Return the sum of all prime numbers below the given limit"""
+    sieve  = [True] * limit
+    sieve[0] = sieve[1] = False
+    for f in range (2, int(limit ** 0.5) + 1):
+        if sieve[f]:
+            for multiple in range(f * f, limit, f):
+              sieve[multiple] = False
+        
+            
+    return sum(i for i, is_prime in enumerate(sieve) if is_prime)
 
 
 if __name__ == '__main__':
